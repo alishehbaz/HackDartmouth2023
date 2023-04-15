@@ -9,6 +9,7 @@ Compared to letting AI write stories directly, Turquoise focuses more on the str
 
 ## How we built it
 This project will eventually cover through website and phone app.
+We are actualizing the website version first, this includes typescript, node.js and OpenAI API. We are using typescript to build the front-end and node.js to build the back-end. We are using OpenAI API to generate the stories.
 
 
 ## Challenges we ran into
