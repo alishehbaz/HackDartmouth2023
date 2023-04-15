@@ -6,6 +6,8 @@
     "typescript": "^5.0.4"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "dotenv": "^16.0.3",
+    "express": "^4.17.1",
+    "mongoose": "^7.0.3"
   }
 }
