@@ -1,16 +1,16 @@
 {
     "ideas": [
         {
-            "title": TITLE,
-            "description": DESCRIPTION
+            "TITLE": <TITLE>,
+            "DESCRIPTION": <DESCRIPTION>
         },
         {
-            "title": TITLE,
-            "description": DESCRIPTION
+            "TITLE": <TITLE>,
+            "DESCRIPTION": <DESCRIPTION>
         },
         {
-            "title": TITLE,
-            "description": DESCRIPTION
+            "TITLE": <TITLE>,
+            "DESCRIPTION": <DESCRIPTION>
         }
     ]
 }
