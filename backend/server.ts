@@ -13,7 +13,7 @@ app.get("/autocomplete-keywords", async (req, res) => {
     apiKey: process.env.OPEN_AI_API_KEY,
   });
   const openai = new OpenAIApi(configuration);
-  const prompt = "Give me a names of three fruits";
+  const prompt = "Give me a names of three fruits - - - - -";
 
   const response_tof = await openai.createChatCompletion({
     model: "gpt-3.5-turbo",
