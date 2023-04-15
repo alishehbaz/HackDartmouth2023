@@ -1,4 +1,6 @@
 # HackDartmouth2023
+Note: edit this markdown file while you have ideas / take a break from coding
+
 ## Inspiration
 Outside of my computer science journey, I am also a book writer. Particularly, I am interested in fantasy stories. Writing books has been a long-term goal on my to-do list since primary school. Unfortunately, I wasn't able to finish any of those until now. One reason I realized from writing a fantasy book is the step of world creation, those various ideas that come to my mind and character settings that I wish to depict. They were seem too overwhelming and time-spending to complete those tasks.
 
@@ -23,4 +25,4 @@ This project will eventually cover through website and phone app.
 
 
 
-## What's next for Turquoise
+## What's next for this project
