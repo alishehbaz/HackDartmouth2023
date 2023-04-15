@@ -1,0 +1,5 @@
+axios
+body-parser
+express
+mongoose
+prompt-sync
