@@ -4,11 +4,7 @@ import {
 } from 'react-router-dom';
 import LandingPage from './landing_page';
 import Nav from './navbar';
-import prompts_page from './prompts_page';
-
-const Test = (props) => {
-  return <div> ID: {props.match.params.id} </div>;
-};
+import PromptsPage from './prompts_page';
 
 const FallBack = (props) => {
   return <div>URL Not Found</div>;
@@ -22,7 +18,7 @@ const App = (props) => {
         <Switch>
           <Route exact path="/" component={LandingPage} />
           <Route path="/about" component={Nav} />
-          <Route exact path="/test/:id" component={Test} />
+          <Route path="/prompts" component={PromptsPage} />
           <Route component={FallBack} />
         </Switch>
       </div>
