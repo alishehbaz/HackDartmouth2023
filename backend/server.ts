@@ -193,7 +193,7 @@ app.post("/generate_suggestions", async (req, res) => {
     }
   }
 
-  res.json({ message: "Hellow worlds" });
+  res.json({ characters: char_obj_list });
 });
 
 app.post("/generate_initial_prompts", async (req, res) => {
