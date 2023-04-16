@@ -4,6 +4,7 @@ import {
 } from 'react-router-dom';
 import LandingPage from './landing_page';
 import PromptsPage from './prompts_page';
+import StoryBoard from './storyboard';
 
 const FallBack = (props) => {
   return <div>URL Not Found</div>;
@@ -16,6 +17,7 @@ const App = (props) => {
         <Switch>
           <Route exact path="/" component={LandingPage} />
           <Route path="/prompts" component={PromptsPage} />
+          <Route path="/storyboard" component={StoryBoard} />
           <Route component={FallBack} />
         </Switch>
       </div>

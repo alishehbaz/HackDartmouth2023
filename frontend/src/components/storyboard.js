@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-class Outline extends Component {
+class PromptsPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -12,19 +12,13 @@ class Outline extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Outline</h1>
-        <div>{this.props.outline.map((header) => (
-          <p>{header}</p>
-        ))}
-        </div>
-      </div>
+      <div>hi</div>
     );
   }
 }
 
 const mapStateToProps = (state) => ({
-  outline: state.outline.list,
+  prompts: state.responses.prompts,
 });
 
-export default withRouter(connect(mapStateToProps, null)(Outline));
+export default withRouter(connect(mapStateToProps, null)(PromptsPage));
