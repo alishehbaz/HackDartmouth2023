@@ -3,9 +3,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-const outlist = ['bruh', 'bruh', 'bruh', 'bruh'];
-
-class Outline extends Component {
+class Story extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -15,11 +13,9 @@ class Outline extends Component {
   render() {
     return (
       <div>
-        <h1>Outline</h1>
-        <button type="submit" style={{ background: '#3C3C66' }}> Update Outline </button>
-        <div>{outlist.map((header) => (
-          <p>{header}</p>
-        ))}
+        <div className="story-box">
+          <h1>heading</h1>
+          <p>truncated text</p>
         </div>
       </div>
     );
@@ -30,4 +26,4 @@ class Outline extends Component {
 //   outline: state.outline.list,
 // });
 
-export default withRouter(connect(null, null)(Outline));
+export default withRouter(connect(null, null)(Story));

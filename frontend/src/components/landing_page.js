@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { Stack, Chip } from '@mui/joy';
+import { Stack, Chip } from '@mui/material';
 import { fetchResponse } from '../actions';
 
 class LandingPage extends Component {
@@ -28,7 +28,7 @@ class LandingPage extends Component {
   handleDelete = (chip) => {
     console.log(this.state.wordList);
     this.setState((perv) => (
-      { wordList: perv.filter((currentChip) => currentChip !== chip) }
+      { wordList: perv.wordList.filter((currentChip) => currentChip !== chip) }
     ));
     console.log(this.state.wordList);
   }

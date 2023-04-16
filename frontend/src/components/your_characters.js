@@ -2,27 +2,21 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import Characters from './characters';
-import Outline from './outline';
-import Editor from './editor';
 import Nav from './navbar';
+import Characters from './characters';
 
-class PromptsPage extends Component {
+class Yourcharacters extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-    };
+    this.state = {};
   }
 
   render() {
     return (
       <div className="main-main">
         <Nav />
-        <div className="main">
-          <Outline />
-          <Editor />
-          <Characters />
-        </div>
+        <h1>Your Characters</h1>
+        <Characters id="chrs" />
       </div>
     );
   }
@@ -32,4 +26,4 @@ class PromptsPage extends Component {
 //   prompts: state.responses.prompts,
 // });
 
-export default withRouter(connect(null, null)(PromptsPage));
+export default withRouter(connect(null, null)(Yourcharacters));

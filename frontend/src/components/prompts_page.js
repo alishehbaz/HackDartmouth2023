@@ -2,49 +2,51 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
+import { sendPrompt } from '../actions';
 
 class PromptsPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      options: [
-        {
-          title: 'Infinite Horizons',
-          description: 'Dartmouth students from different universes team up to uncover the truth behind the mysterious Infinity Horizon that connects their worlds.',
-        },
-        {
-          title: 'The Time Machine',
-          description: 'A scientist builds a time machine and travels to the distant future, where he finds an idyllic society threatened by dark forces.',
-        },
-        {
-          title: 'Brave New World',
-          description: 'In a dystopian society, people are genetically engineered and conditioned to be content',
-        },
-      ],
-      checked: '',
+      checked_body: '',
+      checked_title: '',
+      checked_id: '',
       input: '',
     };
   }
 
   onRadioPress = (e) => {
-    this.setState({ checked: e.target.value });
+    this.setState({ checked_body: e.target.value.description });
+    this.setState({ checked_title: e.target.value.title });
+    this.setState({ checked_id: e.target.value._id });
   }
 
   onTextChange = (e) => {
     this.setState({
       input: e.target.value,
-      checked: e.target.value,
+      checked_title: '',
+      checked_body: e.target.value,
     });
   }
 
   onInputPress = (e) => {
+    const promptID = uuidv4();
     this.setState({
-      checked: e.target.value,
+      checked_title: e.target.value.title,
+      checked_body: e.target.value.body,
+      checked_id: promptID,
     });
   }
 
   onButtonChange = (e) => {
-    this.props.navigate();
+    const temp = {
+      title: this.state.checked_title,
+      body: this.state.checked_body,
+      id: this.state.checked_id,
+    };
+    console.log(temp);
+    this.props.sendPrompt(temp);
   }
 
   render() {
@@ -55,14 +57,14 @@ class PromptsPage extends Component {
           <p>{this.props.prompts}</p>
           <h1>writing a story about</h1>
           <div>
-            {this.state.options.map((option) => (
+            {this.props.prompts.map((option) => (
               <div key={option.title} id="option-box">
                 <label htmlFor={option}>
                   <input
                     type="radio"
                     id="option-choice"
-                    value={option.title}
-                    checked={this.state.checked === option.title}
+                    value={option}
+                    checked={this.state.checked.title === option.title}
                     onChange={this.onRadioPress}
                   />
                   <span style={{ fontWeight: '600', color: '#ED586A' }}>
@@ -97,4 +99,4 @@ const mapStateToProps = (state) => ({
   prompts: state.responses.prompts,
 });
 
-export default withRouter(connect(mapStateToProps, null)(PromptsPage));
+export default withRouter(connect(mapStateToProps, { sendPrompt })(PromptsPage));
