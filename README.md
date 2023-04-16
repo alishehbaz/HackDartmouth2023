@@ -62,14 +62,11 @@ When users are in the brainstorming process, quantity weighs comparatively more 
 While creating a character, there is also a unique ID generated for the character. This ID won't appear on the interface, but it is for further operations.
 ### Writing Process
 - Outlining
-- Modify the name after finishing the story (find & replace throughout the whole story)
 - Text generation (AI-empowered)
-- Statistics (counts of characters' appearance time, first appearance, etc.)
-- Quick jump by clicking on the character's name
 
 ### After finishing the story
 - Proofreading
-  - Summarize the body text (AI-powered)
+  - Summarize the body text (AI-powered) (backend)
   - Compare the summary with the outline
 - Publish
 
@@ -94,6 +91,9 @@ The children group is one of the least patient groups, letting accomplish book b
 - Plot-based
 - Scene-based
 - Theme-based
+- Modify the name after finishing the story (find & replace throughout the whole story)
+- Statistics (counts of characters' appearance time, first appearance, etc.)
+- Quick jump by clicking on the character's name
 
 Users will have more options in choosing the approach of outlining. This project can be updated to support more writing techniques in the future.
 
