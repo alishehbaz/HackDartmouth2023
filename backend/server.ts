@@ -1,4 +1,5 @@
 import express from "express";
+import cors from 'cors';
 import { connectToMongo } from "./db";
 import { Schema, model, connect, Collection } from "mongoose";
 import { Configuration, OpenAIApi } from "openai";
@@ -14,8 +15,10 @@ import { type } from "os";
 const app = express();
 const port = 3000;
 app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 
 app.get("/", (req, res) => {
+
   //getMidJourneyPicture();
   //query("cricket");
   res.send("hackDartmouth 2023");
@@ -42,7 +45,7 @@ function setupOpenAIConfig(): OpenAIApi {
     apiKey: process.env.OPEN_AI_API_KEY,
   });
 
-  return new OpenAIApi(configuration);
+    return new OpenAIApi(configuration);
 }
 
 async function getMidJourneyPicture() {
@@ -87,6 +90,7 @@ app.post("/generate_suggestions", async (req, res) => {
 });
 
 app.post("/generate_initial_prompts", async (req, res) => {
+
   const Prompt = model<IPrompt>("Prompt", promptSchema);
 
   let word_list = req.body.word_list;
@@ -145,6 +149,6 @@ app.post("/generate_initial_prompts", async (req, res) => {
 });
 
 app.listen(port, () => {
-  connectToMongo().catch((err) => console.log(err));
-  return console.log(`Express is listening at http://localhost:${port}`);
+    connectToMongo().catch((err) => console.log(err));
+    return console.log(`Express is listening at http://localhost:${port}`);
 });

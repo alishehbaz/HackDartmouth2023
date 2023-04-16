@@ -1,1 +1,2 @@
 {"scripts":{"dev":"tsx watch server.ts"},"devDependencies":{"@types/express":"^4.17.1","eslint":"^8.38.0","eslint-plugin-react":"^7.32.2","nodemon":"^2.0.22","ts-node":"^10.9.1","tsx":"^3.12.6","typescript":"^5.0.4"},"dependencies":{"dotenv":"^16.0.3","express":"^4.17.1","huggingface-api":"^1.0.3","midjourney-client":"^1.0.8","mongoose":"^7.0.3","node-fetch":"^2.6.9","openai":"^3.2.1"}}
+

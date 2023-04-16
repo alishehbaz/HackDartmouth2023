@@ -1,0 +1,26 @@
+import React from 'react';
+import {
+  BrowserRouter as Router, Route, Switch,
+} from 'react-router-dom';
+import LandingPage from './landing_page';
+import PromptsPage from './prompts_page';
+
+const FallBack = (props) => {
+  return <div>URL Not Found</div>;
+};
+
+const App = (props) => {
+  return (
+    <Router>
+      <div>
+        <Switch>
+          <Route exact path="/" component={LandingPage} />
+          <Route path="/prompts" component={PromptsPage} />
+          <Route component={FallBack} />
+        </Switch>
+      </div>
+    </Router>
+  );
+};
+
+export default App;
