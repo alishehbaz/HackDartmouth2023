@@ -93,6 +93,8 @@ app.post("/autocomplete", async (req, res) => {
     currentSuggestion;
   const openai = setupOpenAIConfig();
 
+  const Suggestion = model<ISuggestion>("Suggestion", suggestionSchema);
+
   const autcomplete_prompt_response = await openai.createChatCompletion({
     model: "gpt-3.5-turbo",
     messages: [{ role: "user", content: autcomplete_prompt }],
@@ -111,7 +113,19 @@ app.post("/autocomplete", async (req, res) => {
 
   console.log(autocomplete_response_list);
 
-  let autocomplete_text = autocomplete_response_list[0].split(":")[1];
+  let new_suggestion = autocomplete_response_list[0].split(":")[1];
+
+  const suggestionObject = new Suggestion({
+    _id: currentSuggestion._id,
+    suggestionDesc: new_suggestion,
+    promptId: currentSuggestion.promptId,
+    characters: currentSuggestion.characters,
+    outlineDesc: currentSuggestion.outlineDesc,
+  });
+
+  suggestionObject.save();
+
+  res.json({ suggestionObject });
 });
 
 app.get("/prompts", async (req, res) => {
