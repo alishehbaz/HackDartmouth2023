@@ -48,6 +48,9 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/joy": "^5.0.0-alpha.75",
     "@reach/combobox": "^0.18.0",
     "axios": "^0.21.1",
     "jquery": "^3.6.0",

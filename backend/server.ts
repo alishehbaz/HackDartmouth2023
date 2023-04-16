@@ -1,9 +1,11 @@
 import express from "express";
+import cors from 'cors';
 import { connectToMongo } from "./db";
 import { Configuration, OpenAIApi } from "openai";
 const app = express();
 const port = 3000;
 app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 
 app.get("/", (req, res) => {
     res.send("hackDartmouth 2023");
