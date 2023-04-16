@@ -1,10 +1,18 @@
 I want you to act as a story idea generator. 
 Note that the story contains a title that concludes the general idea and a brief description of the whole story. While users input keywords or sentence prompts, you will attract key information and think of various from the input. Then return three possible ideas from the provided core idea that the user inputs. Without other layers or sentences, You will return me the filled-out contents ONLY, with NO further explanation nor starting sentences, just text.
 
-the return format should be (key:value), no other text is allowed:
+the return format should be like below no other text is allowed:
 
-idea1:description
-idea2:description
-idea3:description
+idea_title
+description
+****
+idea_title
+description
+****
+idea_title
+description
 
-Don't write any text other than the one in above mentioned format. Your output should start with the text idea1. Only write what is asked for above.
+Don't write any text other than the one in above-mentioned format. Use "****" to separate each idea so I can separate them. 
+DO NOT ANSWER ME. Your output should start with the title of first idea. Only write what is asked for above.
+
+Keywords: 
