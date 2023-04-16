@@ -1,6 +1,6 @@
 # HackDartmouth2023
 ## Inspiration
-Outside of my computer science journey, I am also a book writer. Particularly, I am interested in fantasy stories. Writing books has been a long-term goal on my to-do list since primary school. Unfortunately, I wasn't able to finish any of those until now. One reason I realized from writing a fantasy book is the step of world creation, those various ideas that come to my mind and character settings that I wish to depict. They were seem too overwhelming and time-spending to complete those tasks.
+Outside of my computer science journey, I am also a book writer. Particularly, I am interested in fantasy stories. Writing books has been a long-term goal on my to-do list since primary school. Unfortunately, I wasn't able to finish any of those until now. One reason I realized from writing a fantasy book is the step of world creation, those various ideas that come to my mind and the character settings that I wish to depict. They seemed too overwhelming and time-spending to complete those tasks.
 
 Therefore, AI comes to my mind.
 
