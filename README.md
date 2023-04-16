@@ -54,3 +54,5 @@ We will allow users to create profiles, which will allow them to save their stor
 We will create a mobile app for Saga, which will allow users to create and share stories on their phones.
 
 ### Relationship between characters
+![file relationship animation](https://user-images.githubusercontent.com/47139542/232262653-0a0a2125-6a2f-4355-a98a-4cb4320d56b7.mp4)
+
