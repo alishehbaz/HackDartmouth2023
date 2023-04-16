@@ -11,6 +11,7 @@ import { v4 as uuidv4 } from "uuid";
 import { characterSchema, ICharacter } from "./Models/Character";
 import { suggestionSchema, ISuggestion } from "./Models/Suggestion";
 import { storySchema, IStory } from "./Models/Story";
+import { jsPDF } from "jspdf";
 import { type } from "os";
 
 const app = express();
@@ -64,7 +65,23 @@ async function getMidJourneyPicture() {
 }
 
 app.get("/stories", async (req, res) => {
-  const openai = setupOpenAIConfig();
+  //const openai = setupOpenAIConfig();
+
+  const Story = model<IStory>("stories", storySchema);
+  const response = await Story.find({}).distinct("_id").exec();
+  console.log(response);
+
+  let storyObjectList = [];
+
+  for (const s_id of response) {
+    const sid_response = await Story.findOne({
+      _id: s_id,
+    }).exec();
+
+    storyObjectList.push(sid_response);
+  }
+
+  res.json(storyObjectList);
 });
 
 app.get("/prompts", async (req, res) => {
@@ -126,6 +143,9 @@ app.post("/publish_story", async (req, res) => {
   };
 
   let story_obj_db = new Story(story_obj, { collection: "stories" });
+  const doc = new jsPDF();
+  doc.text(my_story_text, 1, 1);
+  doc.save("story.pdf");
   story_obj_db.save();
   res.json(story_obj);
 });
