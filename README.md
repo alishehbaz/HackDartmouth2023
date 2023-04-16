@@ -28,34 +28,43 @@ Beyond this function, users can use auto-name completion while they type the rec
 Scene four - Users finished one chapter, but are unsure if their texts are off-topic (deviate from the outline)
 Solution: AI-empowered proofread. AI will summarize paragraph the users have written. Users will then be able to compare with the summary of their current text and target content (the outline).
 
+## The process/workflow
+Compared to letting AI write stories directly, Saga focuses more on structural building. While users input their ideas in the window, AI helps the user to store and update character settings. Users can edit the outline including the storylines, world lines, every single character's stories, etc. This will not cause copyright problems because users will write stories themselves eventually.
 
-## What it does
-Compared to letting AI write stories directly, Saga focuses more on the structural building. While users input their ideas in the window, AI helps the user to store and update character settings and help the user to build an outline for it. Users can edit the outline including the storylines, world lines, every single character's stories, etc.
 ### Brainstorming
-- By keywords
-- By core idea
+
+There are two ways of starting from the vague idea:
+- By keywords/core theme
+- By few sentences
+
+When users are in the brainstorming process, quantity weights comparatively more than quality. It is important to make brainstorming easy to operate, so users can either enter few words or sentences to start. AI will then provide them ideas, users can either choose to continue from the generated ideas, customize their own ideas, or re-generate ideas from other prompts. If users already have clear ideas in mind, they also have the option to choose to start creating the storylines directly.
 
 ### Character settings
-- Basic information (name, nick name, age, etc.)
+- Basic information (name, age, etc.)
 - Appearance
 - Beliefs/Stances
 - Social status
 - Personality (Based on MBTI)
 - Relationships with other characters
 
+While creating a character, there is also a unique ID generated for the character. This ID won't appear on the interface, but it is for further operations.
 ### Writing Process
 - Outlining
 - Auto name-completion
-- Modify name after finishing the story (find & replace throughout the whole story)
-- Text generation (AI-enpowered)
-- Statistics (word count, reading time, counts of characters' apearance etc.)
-- Quick search by clicking on the character's name
+- Modify the name after finishing the story (find & replace throughout the whole story)
+- Text generation (AI-empowered)
+- Statistics (counts of characters' appearance time, first appearance, etc.)
+- Quick jump by clicking on the character's name
 
-### After finishing the story
+### After finished the story
 - Proofreading
-  - Summarize the body text (AI-enpowered)
+  - Summarize the body text (AI-powered)
   - Compare the summary with the outline
 - Publish
+
+When users finish the story, proofreading is the next step. AI will summarize the body text, and users can compare the summary with the outline.
+
+After refining the story, users can publish their stories on Saga or other potential platforms, which will allow other users to read their stories. Users can also share their stories on other social media platforms.
 
 ## How we built it
 React, Node.js, MongoDB, Typescript, and GPT-3.5
@@ -78,41 +87,46 @@ React, Node.js, MongoDB, Typescript, and GPT-3.5
 - Scene-based
 - Theme-based
 
+Users will have more options in choosing the approach of outlining. This project can be updated to support more writing techniques in future.
+
 ### Character attributes
-Beyond what we have already for the character attributes, we will allow users to create/edit/delete customized attributes for each character.
+Our current character attributes number is limited, but customizable features can be expanded in the future.
 
 ### Children friendly
-We will add a children-friendly mode for Saga, which will allow users to create stories for children. The children-friendly mode will have a simplified interface and will only allow users to create stories for children.
-Also, in the brainstorming session, we will ask AI to generate a sentence starter, let children using their creativity to finish the rest of the stories.
+Children have many stories. Their creativities are far more imaginative. With a children-friendly mode for Saga, Children can easily create their very first stories. For example, in the brainstorming session, we can ask AI to begin with a sentence starter and let children fly their imaginations. Finishing stories can be accomplishments in their life and excellent practice experience. In addition, this can potentially benefit developmental psychology research and younger child education.
+
 
 ### Connect to graphic AI
-We will connect Saga to graphic AI, which will allow users to create characters and scenes with graphic AI.
-- Users can also use graphic AI to create the cover of their books.
-- Use graphic AI to create the characters avators
+Saga can connect other AI's APIs, which would allow users to continue working on their products and artworks.
+- Users can use graphic AI
+  - create the cover of their books
+  - create the characters avators
 - Manga
 - Cartoon
 - Game
-- Connect to Metaverse
+- Metaverse
 
 ### Plot vistualization (Freytag's Pyramid)
+While reviewing the tone of the story, users can also see the plot visualization, which help users to control the tempo of the story telling.
 ![Story Plot](https://writers.com/wp-content/uploads/2021/12/Freytags-Pyramid.png)
 (credits by [writers.com](https://writers.com/freytags-pyramid))
-Also has educational purpose
+This can also be used to help students to learn the structure of the story.
+
 ### User profiles
-We will allow users to create profiles, which will allow them to save their stories and settings. Users can also share their stories with other users.
+Users can create profiles, they have their own space to store their stories, and they can also follow other users.
 
 ### Mobile app
-We will create a mobile app for Saga, which will allow users to create and share stories on their phones.
+The mobile app is a pocket solution for users to record ideas and brainstorm anytime and anywhere. They can also share their texts with others.
 
 ### Audio to text
-We will allow users to use audio to text to create stories, which will allow users to record their ideas anytime and anywhere.
+In addition, users can use audio-to-text to create stories, which will allow users to record their ideas anytime and anywhere.
 
 ### Relationship between characters
 https://user-images.githubusercontent.com/47139542/232262653-0a0a2125-6a2f-4355-a98a-4cb4320d56b7.mp4
 
 ### Publish & Share
-We will allow users to publish their stories on Saga or other potential platforms, which will allow other users to read their stories. Users can also share their stories on other social media platforms.
+Users can publish their stories on Saga or other potential platforms, which will allow other users to read their stories. Users can also share their stories on other social media platforms.
 In addition, this can potentially collaborate with other platforms and sponsors to pay for the writers.
 
-### Multi-language (multilingo) support
-We will support multiple languages, which will allow users to create stories in different languages.
+### Multi-language (multilingual) support
+Support multiple languages can let more users to access this product, which will allow users to create stories in different languages.
