@@ -80,18 +80,6 @@ After refining the story, users can publish their stories on Saga or other poten
 ## How we built it
 React, Node.js, MongoDB, Typescript, and GPT-3.5
 
-## Challenges we ran into
-
-
-
-## Accomplishments that we're proud of
-
-
-
-## What we learned
-
-
-
 ## What's next for Saga
 ### More approaches to outlining [Reference: writers.com](https://writers.com/how-to-write-a-story-outline)
 - Plot-based
