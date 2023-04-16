@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import logo from './logo.png';
 import './landing_page.css';
 
-const text = "";
+const text = "bhadwa";
 const options = [
   {
     title: 'Infinite Horizons',
