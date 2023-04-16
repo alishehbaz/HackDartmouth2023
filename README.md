@@ -1,7 +1,8 @@
 <!-- # HackDartmouth2023 -->
 <!-- ## Elevator Pitch
 Writing stories with increasing efficiency without limiting creativity. This AI-powered project lowers the threshold for completing outlines, story settings, and refining their overall style and tone. -->
-Unleash your creativity with AI-powered efficiency.
+>**Unleash your creativity with AI-powered efficiency.**
+
 ## Problem Statement
 Stories are intriguing, but many interesting stories nipped in the bud. Although writers practice their writing skills, outlining and consisting stories still intimidating. World creation, character settings, and storylines can be overwhelming and time-consuming, often hindering writers from completing their stories. 
 
@@ -13,21 +14,31 @@ Therefore, a saga idea was born.
 ## Project Description
 Project Saga is an AI-powered story-writing assistant. Comparing to current Artificial Intelligence story writing AI tools (e.g. [Jasper](https://www.jasper.ai/)), Saga minimizes the potential creativity restriction by AI. The writer's personal writing style is one of the criteria for the book, so Saga won't help writers write stories directly. Instead, Saga aims to lower the threshold of writing and support writers to overcome writing obstacles themselves:
 
+---
 **Scene one** - Users only have vague ideas
+
 Solution: Input keywords, core theme or sentences, and let AI generate brainstorming ideas.
 
-**Scene two** - Users are having trouble with characters' setting
+---
+**Scene two** - Users are having trouble with the characters' setting
+
 Solution: Based on the idea/outline provided by users, AI help to generate/attract characters and list them for users to modify. Characters' attributes include name, beliefs, social standing (if applicable), personality, etc. Personality could be based on the *Myers–Briggs Type Indicator (MBTI) type that the users can start on. 
 
 \*Myers–Briggs Type Indicator (MBTI): Introspective self-report questionnaire indicating differing psychological preferences, which has a total of 16 preferences type in 4 dimensions.
 
+---
 **Scene three** - Users are uncertain about the characters setting, having trouble naming
+
 Solution: Users can edit the stored character list of anything during the writing process. If the user changes the name of one character, this character's name that has appeared in the existing text will be replaced with the new name.
 Beyond this function, users can use auto-name completion while they type the recorded character's name (or any object name in future features) to speed up their typing speed. Users will be benefited especially when the name string is long or in a multi-lingual environment.
 
+
+---
 **Scene four** - Users finished one chapter, but are unsure if their texts are off-topic (deviate from the outline)
+
 Solution: AI-empowered proofread. AI will summarize paragraphs the users have written. Users will then be able to compare with the summary of their current text and target content (the outline).
 
+---
 ## The process/workflow
 Compared to letting AI write stories directly, Saga focuses more on structural building. While users input their ideas in the window, AI helps the user to store and update character settings. Users can edit the outline including the storylines, world lines, every single character's stories, etc. This will not cause copyright problems because users will write stories themselves eventually.
 
