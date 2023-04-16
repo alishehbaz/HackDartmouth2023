@@ -5,11 +5,11 @@ import {
 import LandingPage from './landing_page';
 import PromptsPage from './prompts_page';
 
-const FallBack = (props) => {
+const FallBack = () => {
   return <div>URL Not Found</div>;
 };
 
-const App = (props) => {
+const App = () => {
   return (
     <Router>
       <div>

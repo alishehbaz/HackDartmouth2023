@@ -1,11 +1,9 @@
-/* eslint-disable react/jsx-props-no-spreading */
+
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { Chip, ChipDelete } from '@mui/joy';
 import { fetchResponse } from '../actions';
-import logo from './logo.png';
-import './landing_page.css';
 
 class LandingPage extends Component {
   constructor(props) {
