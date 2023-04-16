@@ -9,7 +9,7 @@ export const ROOT_URL = 'https://localhost:3000';
 export const API_KEY = '/generate_initial_prompts';
 
 export function fetchResponse() {
-  const userInput = ["bird", "song", "timberdoodle"];
+  const userInput = ['bird', 'song', 'timberdoodle'];
   return (dispatch) => {
     // getting list of posts from database
     axios.get(`${ROOT_URL}/${API_KEY}?=${userInput}`)

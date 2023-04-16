@@ -11,12 +11,16 @@ class LandingPage extends Component {
     };
   }
 
-  onButtonPress
+  onButtonChange = (event) => {
+    this.setState((prevState) => ({
+      useImageUpload: !prevState.useImageUpload,
+    }));
+  }
 
   render() {
     return (
       <div className="post_container">
-        <button type="button" onChange={this.onTagsChange}>test</button>
+        <button type="button" onChange={this.onButtonChange}>test</button>
       </div>
     );
   }
