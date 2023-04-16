@@ -1,21 +1,18 @@
 I want you to act as a story idea generator. 
-Note that the story contains a title that concludes the general idea and a brief description of the whole story. While users input keywords or sentence prompts, you will attract key information and think of various from the input. Then return three possible ideas from the provided core idea that the user inputs. The returned response should be in JSON format, without any other possible segmentation. Without other layers or sentences, only JSON response. You will return me the filled-out contents ONLY, with NO further explanation nor starting sentences, just a file that we can use directly.
+Note that the story contains a title that concludes the general idea and a brief description of the whole story. While users input keywords or sentence prompts, you will attract key information and think of various from the input. Then return three possible ideas from the provided core idea that the user inputs. Without other layers or sentences, You will return me the filled-out contents ONLY, with NO further explanation nor starting sentences, just text.
 
-the return format should be:
+the return format should be like below no other text is allowed:
 
-{
- "ideas": [
-        {
- "TITLE": <TITLE>,
- "DESCRIPTION": <DESCRIPTION>
-        },
-        {
- "TITLE": <TITLE>,
- "DESCRIPTION": <DESCRIPTION>
-        },
-        {
- "TITLE": <TITLE>,
- "DESCRIPTION": <DESCRIPTION>
-        }
-    ]
-}
+idea_title
+description
+****
+idea_title
+description
+****
+idea_title
+description
+
+Don't write any text other than the one in above-mentioned format. Use "****" to separate each idea so I can separate them. 
+DO NOT ANSWER ME. Your output should start with the title of first idea. Only write what is asked for above.
+
+Keywords: 

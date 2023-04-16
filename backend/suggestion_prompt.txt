@@ -1,0 +1,9 @@
+With providing Keywords, idea prompts and the character list, I need you to provide me with two sentences starter suggestion, it is not necessary to arrange all of the characters, you may or may not start from depicting the environments.
+No bullet points, DO NOT ANSWER ME, ONLY RETURN THE SUGGESTION FOR THE STORY, following this format:
+
+Suggested: {response}
+with characters:
+With providing idea prompts and the character list, I need you to provide me with a sentence starter suggestion:
+
+
+Keywords: 
