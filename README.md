@@ -3,7 +3,9 @@
 Writing stories with increasing efficiency without limiting creativity. This AI-powered project lowers the threshold for completing outlines, story settings, and refining their overall style and tone.
 
 ## Inspiration
-Outside of my computer science journey, I am also a book writer. Particularly, I am interested in fantasy stories. Writing books has been a long-term goal on my to-do list since primary school. Unfortunately, I wasn't able to finish any of those until now. One reason I realized from writing a fantasy book is the step of world creation, those various ideas that come to my mind and character settings that I wish to depict. They were seem too overwhelming and time-spending to complete those tasks.
+Many people may have ideas of stories they would like to write. However, planning and writing a long story require time and quite a amount of work, which is intimidating especially for beginner writers. World creation, character settings, and storylines can be overwhelming and time-consuming to create, often hindering writers from completing their stories. 
+
+The Saga project is here to solve this problem: instead of starting from nowhere or letting AI completely generate the stories, Saga aim to lower the threshold and shorten the time wasted when writers trying to figure out the whole story structure. Saga seeks to address this problem by utilizing AI to assist writers in creating detailed and structured outlines for their stories, allowing them to focus on writing the actual content of their books.
 
 Therefore, AI comes to my mind.
 
@@ -26,4 +28,29 @@ This project will eventually cover through website and phone app.
 
 
 
-## What's next for Turquoise
+## What's next for Saga
+### Character attributes
+Beyond what we have already for the character attributes, we will allow users to create/edit/delete customized attributes for each character.
+
+### Children friendly
+We will add a children-friendly mode for Saga, which will allow users to create stories for children. The children-friendly mode will have a simplified interface and will only allow users to create stories for children.
+Also, in the brainstorming session, we will ask AI to generate a sentence starter, let children using their creativity to finish the rest of the stories.
+
+### Connect to graphic AI
+We will connect Saga to graphic AI, which will allow users to create characters and scenes with graphic AI.
+- Users can also use graphic AI to create the cover of their books.
+- Use graphic AI to create the characters avators
+- Manga
+- Cartoon
+- Connect to Metaverse
+
+### Plot vistualization
+![Story Plot](https://writers.com/wp-content/uploads/2021/12/Freytags-Pyramid.png)
+
+### User profiles
+We will allow users to create profiles, which will allow them to save their stories and settings. Users can also share their stories with other users.
+
+### Mobile app
+We will create a mobile app for Saga, which will allow users to create and share stories on their phones.
+
+### Relationship between characters
