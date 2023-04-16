@@ -11,6 +11,7 @@ import { v4 as uuidv4 } from "uuid";
 import { characterSchema, ICharacter } from "./Models/Character";
 import { suggestionSchema, ISuggestion } from "./Models/Suggestion";
 import { storySchema, IStory } from "./Models/Story";
+import { outlineSchema, IOutline } from "./Models/Outline";
 import { jsPDF } from "jspdf";
 import { type } from "os";
 
@@ -65,8 +66,6 @@ async function getMidJourneyPicture() {
 }
 
 app.get("/stories", async (req, res) => {
-  //const openai = setupOpenAIConfig();
-
   const Story = model<IStory>("stories", storySchema);
   const response = await Story.find({}).distinct("_id").exec();
   console.log(response);
@@ -82,6 +81,37 @@ app.get("/stories", async (req, res) => {
   }
 
   res.json(storyObjectList);
+});
+
+app.post("/autocomplete", async (req, res) => {
+  let currentSuggestion = req.body;
+  currentSuggestion =
+    "As they wandered through the verdant paths of the Dartmouth campus, the students from different universes couldn't help but feel a sense of awe and wonder at the infinite possibilities of the multiverse. Each had come from a vastly different world, shaped by its own unique history and culture, but now they found themselves united by a common sense of curiosity and adventure.";
+  const autcomplete_prompt =
+    fs.readFileSync("autocomplete_prompt.txt", "utf8") +
+    " " +
+    currentSuggestion;
+  const openai = setupOpenAIConfig();
+
+  const autcomplete_prompt_response = await openai.createChatCompletion({
+    model: "gpt-3.5-turbo",
+    messages: [{ role: "user", content: autcomplete_prompt }],
+    max_tokens: 350,
+    temperature: 0,
+  });
+
+  console.log(autcomplete_prompt);
+
+  const autcomplete_prompt_response_parsed =
+    autcomplete_prompt_response.data.choices[0].message.content;
+
+  let autocomplete_response_list = autcomplete_prompt_response_parsed
+    .trim()
+    .split("\n");
+
+  console.log(autocomplete_response_list);
+
+  let autocomplete_text = autocomplete_response_list[0].split(":")[1];
 });
 
 app.get("/prompts", async (req, res) => {
@@ -123,7 +153,7 @@ app.get("/characters", async (req, res) => {
 app.post("/publish_story", async (req, res) => {
   let my_story_text = req.body.storyText;
   let char_obj = req.body.characters;
-  char_obj = {};
+  char_obj = { char: "aldasjd" };
   let outline_obj = req.body.outline;
   outline_obj = [
     "1jlkjasdlkjasd",
@@ -143,9 +173,9 @@ app.post("/publish_story", async (req, res) => {
   };
 
   let story_obj_db = new Story(story_obj, { collection: "stories" });
-  const doc = new jsPDF();
-  doc.text(my_story_text, 1, 1);
-  doc.save("story.pdf");
+  //const doc = new jsPDF();
+  //doc.text(my_story_text, 20, 20);
+  //doc.save("story.pdf");
   story_obj_db.save();
   res.json(story_obj);
 });
@@ -153,7 +183,7 @@ app.post("/publish_story", async (req, res) => {
 app.post("/generate_outline_from_paragraph", async (req, res) => {
   console.log("Generating outline from the suggestion provided");
   const openai = setupOpenAIConfig();
-  const Character = model<ICharacter>("Character", characterSchema);
+  const Outline = model<IOutline>("Outline", outlineSchema);
 });
 
 app.post("/generate_suggestions", async (req, res) => {
