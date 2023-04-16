@@ -1,30 +1,18 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import logo from './logo.png';
-import './landing_page.css';
-
-const text = "bhadwa";
-const options = [
-  {
-    title: 'Infinite Horizons',
-    description: 'Dartmouth students from different universes team up to uncover the truth behind the mysterious Infinity Horizon that connects their worlds.',
-  },
-  {
-    title: 'The Time Machine',
-    description: 'A scientist builds a time machine and travels to the distant future, where he finds an idyllic society threatened by dark forces.',
-  },
-  {
-    title: 'Brave New World',
-    description: 'In a dystopian society, people are genetically engineered and conditioned to be content',
-  },
-];
+import { v4 as uuidv4 } from 'uuid';
+import { sendPrompt } from '../actions';
 
 class PromptsPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedOption: '',
+      checked_body: '',
+      checked_title: '',
+      checked_id: '',
+      input: '',
     };
     this.handleOptionChange = this.handleOptionChange.bind(this);
   }
@@ -35,23 +23,56 @@ class PromptsPage extends Component {
     });
   }
 
+  onRadioPress = (e) => {
+    this.setState({ checked_body: e.target.value.description });
+    this.setState({ checked_title: e.target.value.title });
+    this.setState({ checked_id: e.target.value._id });
+  }
+
+  onTextChange = (e) => {
+    this.setState({
+      input: e.target.value,
+      checked_title: '',
+      checked_body: e.target.value,
+    });
+  }
+
+  onInputPress = (e) => {
+    const promptID = uuidv4();
+    this.setState({
+      checked_title: e.target.value.title,
+      checked_body: e.target.value.body,
+      checked_id: promptID,
+    });
+  }
+
+  onButtonChange = (e) => {
+    const temp = {
+      title: this.state.checked_title,
+      body: this.state.checked_body,
+      id: this.state.checked_id,
+    };
+    console.log(temp);
+    this.props.sendPrompt(temp);
+  }
+
   render() {
     return (
       <div className="main-container">
-        <img src={logo} alt="logo" />
+        <div className="logo" alt="logo" />
         <div className="prompts-container">
           <p>{this.props.prompts}</p>
           <h1>writing a story about</h1>
           <div>
-            {options.map((option) => (
+            {this.props.prompts.map((option) => (
               <div key={option.title} id="option-box">
                 <label htmlFor={option}>
                   <input
                     type="radio"
                     id="option-choice"
-                    value={option.title}
-                    checked={this.state.selectedOption === option.title}
-                    onChange={this.handleOptionChange}
+                    value={option}
+                    checked={this.state.checked.title === option.title}
+                    onChange={this.onRadioPress}
                   />
                   <span style={{ fontWeight: '600', color: '#ED586A' }}>
                     {option.title}
@@ -64,13 +85,17 @@ class PromptsPage extends Component {
           or...
           <div>
             <div className="prompt-text-input">
-              <label htmlFor={text}>Enter some text:</label>
-                  <input
-                    id="text-input"
-                    type="text"
-                  />
-              </div>
+              <input
+                id="text-input"
+                type="text"
+                value={this.state.input}
+                onChange={this.onTextChange}
+                onClick={this.onInputPress}
+                placeholder="Enter your own prompt:"
+              />
+            </div>
           </div>
+          <button type="button" className="promptinput" onClick={this.onButtonChange}>Continue</button>
         </div>
       </div>
     );
@@ -81,4 +106,4 @@ const mapStateToProps = (state) => ({
   prompts: state.responses.prompts,
 });
 
-export default withRouter(connect(mapStateToProps, null)(PromptsPage));
+export default withRouter(connect(mapStateToProps, { sendPrompt })(PromptsPage));
