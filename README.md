@@ -58,6 +58,11 @@ React, Node.js, MongoDB, Typescript, and GPT-3.5
 
 
 ## What's next for Saga
+### More approaches of outlining [Reference: writers.com](https://writers.com/how-to-write-a-story-outline)
+- Plot-based
+- Scene-based
+- Theme-based
+
 ### Character attributes
 Beyond what we have already for the character attributes, we will allow users to create/edit/delete customized attributes for each character.
 
@@ -75,7 +80,7 @@ We will connect Saga to graphic AI, which will allow users to create characters 
 
 ### Plot vistualization
 ![Story Plot](https://writers.com/wp-content/uploads/2021/12/Freytags-Pyramid.png)
-
+(credits by [writers.com](https://writers.com/freytags-pyramid))
 ### User profiles
 We will allow users to create profiles, which will allow them to save their stories and settings. Users can also share their stories with other users.
 
