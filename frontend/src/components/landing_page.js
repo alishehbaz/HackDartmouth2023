@@ -4,6 +4,8 @@ import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { Chip, ChipDelete } from '@mui/joy';
 import { fetchResponse } from '../actions';
+import logo from './logo.png';
+import './landing_page.css';
 
 class LandingPage extends Component {
   constructor(props) {
@@ -68,8 +70,9 @@ class LandingPage extends Component {
   render() {
     return (
       <div className="home_page">
-        <h>storyTime.ai</h>
-        <p>Generate interactive picturebooks with a click! Try giving your context and see yourself the fun AI workings!</p>
+        <img className="logo" src={logo} alt="logo" />
+        <p>Your ideas. Your saga. Your creativity. Our power.</p>
+        <p>Try giving our tool a one-liner initial story prompt, or if you don’t have one, write keywords that interest you.</p>
         <input type="text" onKeyDown={this.onSubmit} onChange={this.onTextChange} value={this.state.input} />
         <button type="button" onClick={this.onButtonChange}>test</button>
         {this.renderChips()}
