@@ -76,6 +76,7 @@ We will connect Saga to graphic AI, which will allow users to create characters 
 - Use graphic AI to create the characters avators
 - Manga
 - Cartoon
+- Game
 - Connect to Metaverse
 
 ### Plot vistualization
@@ -86,6 +87,9 @@ We will allow users to create profiles, which will allow them to save their stor
 
 ### Mobile app
 We will create a mobile app for Saga, which will allow users to create and share stories on their phones.
+
+### Audio to text
+We will allow users to use audio to text to create stories, which will allow users to record their ideas anytime and anywhere.
 
 ### Relationship between characters
 https://user-images.githubusercontent.com/47139542/232262653-0a0a2125-6a2f-4355-a98a-4cb4320d56b7.mp4
