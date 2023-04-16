@@ -1,21 +1,27 @@
 import { Schema } from "mongoose";
 
 export interface ICharacter {
-  charId: string;
+  _id: string;
+  promptId: string;
+  belief: string;
   name: string;
-  nickname: string;
   socialGroup: string;
-  relationships: string;
+  r1: string;
+  r2: string;
   mbtiType: string;
-  firstAppearanceChar: string;
+  firstAppearanceChar: number;
+  customUserCharacter: string;
 }
 
 export const characterSchema = new Schema<ICharacter>({
-  charId: { type: String, required: true },
+  _id: { type: String, required: true },
+  promptId: { type: String, required: true },
   name: { type: String, required: true },
-  nickname: { type: String, required: true },
+  belief: { type: String, required: true },
   socialGroup: { type: String, required: true },
-  relationships: { type: String, required: true },
+  r1: { type: String, required: true },
+  r2: { type: String, required: true },
   mbtiType: { type: String, required: true },
-  firstAppearanceChar: { type: String },
+  customUserCharacter: { type: String, required: true },
+  firstAppearanceChar: { type: Number },
 });
