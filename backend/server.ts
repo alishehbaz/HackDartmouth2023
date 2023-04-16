@@ -103,6 +103,39 @@ app.get("/characters", async (req, res) => {
   res.json(charObjectList);
 });
 
+app.post("/publish_story", async (req, res) => {
+  let my_story_text = req.body.storyText;
+  let char_obj = req.body.characters;
+  char_obj = {};
+  let outline_obj = req.body.outline;
+  outline_obj = [
+    "1jlkjasdlkjasd",
+    "ahsldkjasdkjalskdj",
+    "hasdljaslkdjaksjdklasd",
+  ];
+  my_story_text =
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+
+  const Story = model<IStory>("Story", storySchema);
+
+  const story_obj = {
+    _id: uuidv4(),
+    storyCharacters: char_obj,
+    storyText: my_story_text,
+    storyOutline: outline_obj,
+  };
+
+  let story_obj_db = new Story(story_obj, { collection: "stories" });
+  story_obj_db.save();
+  res.json(story_obj);
+});
+
+app.post("/generate_outline_from_paragraph", async (req, res) => {
+  console.log("Generating outline from the suggestion provided");
+  const openai = setupOpenAIConfig();
+  const Character = model<ICharacter>("Character", characterSchema);
+});
+
 app.post("/generate_suggestions", async (req, res) => {
   console.log("Generating suggestions based on the prompt");
   const openai = setupOpenAIConfig();
