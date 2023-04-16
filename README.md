@@ -7,7 +7,12 @@ Many people may have ideas of stories they would like to write. However, plannin
 
 The Saga project is here to solve this problem: instead of starting from nowhere or letting AI completely generate the stories, Saga aim to lower the threshold and shorten the time wasted when writers trying to figure out the whole story structure. Saga seeks to address this problem by utilizing AI to assist writers in creating detailed and structured outlines for their stories, allowing them to focus on writing the actual content of their books.
 
-Therefore, AI comes to mind.
+Having a vague idea? Put keywords or words in sentences, and let AI supporting you to brainstorm ideas.
+Having trouble with complex characters relationship? Let Saga help you to organize those characters.
+Speeding up the writing process? Use auto name completion.
+
+
+Saga is the assistant you need to help you to create your own stories.
 
 ## What it does
 Compared to letting AI write stories directly, Saga focuses more on the structural building. While users input their ideas in the window, AI helps the user to store and update character settings and help the user to build an outline for it. Users can edit the outline including the storylines, world lines, every single character's stories, etc.
