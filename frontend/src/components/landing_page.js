@@ -4,6 +4,8 @@ import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { Stack, Chip } from '@mui/material';
 import { fetchResponse } from '../actions';
+import logo from './logo.png';
+import './landing_page.css';
 
 class LandingPage extends Component {
   constructor(props) {

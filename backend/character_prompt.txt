@@ -1,0 +1,29 @@
+With providing idea prompts, I need you to provide me a list of potential characters in this format:
+
+Name:__
+Social_Group:__
+Belief:__
+MBTI:__
+Relationship_with_other_character:
+__(other character)'s __
+__(other character)'s __
+****
+Name:__
+Social_Group:__
+Belief:__
+MBTI:__
+Relationship_with_other_character:
+__(other character)'s __
+__(other character)'s __
+****
+Name:__
+Social_Group:__
+Belief:__
+MBTI:__
+Relationship_with_other_character:
+__(other character)'s __
+__(other character)'s __
+
+DO NOT ANSWER ME, ONLY RETURN CLEAN FORMAT WITH FILLED INFO.
+
+Idea: 

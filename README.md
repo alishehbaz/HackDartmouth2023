@@ -1,7 +1,6 @@
 # HackDartmouth2023
 ## Elevator Pitch
-Writing stories with increasing efficiency without limiting creativity. This AI-powered project lowers the threshold for completing outlines, story settings, and refining their overall style and tone.
-
+Many people have ideas for stories but find planning and writing a long story intimidating. World creation, character development, and plot construction can be overwhelming and hinder writers from completing their stories. The {project name} project uses AI to help aspiring writers create a detailed and structured story outline, reducing time and effort without limiting creativity. With clear and modifiable characters and outlines, beginner writers can overcome the initial obstacles and achieve their writing goals, while advanced writers can refine their artworks by AI-powered summary and comparison.
 ## Inspiration
 Outside of my computer science journey, I am also a book writer. Particularly, I am interested in fantasy stories. Writing books has been a long-term goal on my to-do list since primary school. Unfortunately, I wasn't able to finish any of those until now. One reason I realized from writing a fantasy book is the step of world creation, those various ideas that come to my mind and character settings that I wish to depict. They were seem too overwhelming and time-spending to complete those tasks.
 

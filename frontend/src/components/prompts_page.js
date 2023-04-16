@@ -14,6 +14,13 @@ class PromptsPage extends Component {
       checked_id: '',
       input: '',
     };
+    this.handleOptionChange = this.handleOptionChange.bind(this);
+  }
+
+  handleOptionChange(event) {
+    this.setState({
+      selectedOption: event.target.value,
+    });
   }
 
   onRadioPress = (e) => {

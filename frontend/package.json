@@ -8,7 +8,8 @@
     "test": "eslint src",
     "build": "npm run clean; NODE_ENV=production webpack --color; cp -f _redirects dist/",
     "winbuild": "npm run clean & SET NODE_ENV=production& webpack --color",
-    "clean": "rimraf dist"
+    "clean": "rimraf dist",
+    "prettier": "prettier --write"
   },
   "repository": {
     "type": "git",
@@ -28,11 +29,12 @@
     "autoprefixer": "^10.2.5",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.2.1",
-    "eslint": "^7.24.0",
+    "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-webpack-plugin": "^2.5.3",
     "file-loader": "^6.2.0",
@@ -40,6 +42,7 @@
     "mini-css-extract-plugin": "^1.4.1",
     "postcss-loader": "^5.2.0",
     "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.8.7",
     "sass": "^1.32.8",
     "sass-loader": "^11.0.1",
     "style-loader": "^2.0.0",
