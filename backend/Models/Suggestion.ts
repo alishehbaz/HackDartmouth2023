@@ -2,7 +2,7 @@ import { Schema } from "mongoose";
 import { ICharacter } from "./Character";
 
 export interface ISuggestion {
-  suggestionId: string;
+  _id: string;
   suggestionDesc: string;
   promptId: string;
   characters: ICharacter[];
@@ -10,7 +10,7 @@ export interface ISuggestion {
 }
 
 export const suggestionSchema = new Schema<ISuggestion>({
-  suggestionId: { type: String, required: true },
+  _id: { type: String, required: true },
   suggestionDesc: { type: String, required: true },
   promptId: { type: String, required: true },
   characters: { type: [Object], required: true },

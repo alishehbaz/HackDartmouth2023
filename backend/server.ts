@@ -9,6 +9,7 @@ import fetch from "node-fetch";
 import { promptSchema, IPrompt } from "./Models/Prompt";
 import { v4 as uuidv4 } from "uuid";
 import { characterSchema, ICharacter } from "./Models/Character";
+import { suggestionSchema, ISuggestion } from "./Models/Suggestion";
 import { storySchema, IStory } from "./Models/Story";
 import { type } from "os";
 
@@ -137,7 +138,7 @@ app.post("/generate_suggestions", async (req, res) => {
 
   //console.log(file_prompt_suggestion);
 
-  const suggestion_prompt_response = await openai.createChatCompletion({
+  const character_prompt_response = await openai.createChatCompletion({
     model: "gpt-3.5-turbo",
     messages: [{ role: "user", content: file_prompt_character }],
     max_tokens: 350,
@@ -145,7 +146,7 @@ app.post("/generate_suggestions", async (req, res) => {
   });
 
   const character_prompt_response_parsed =
-    suggestion_prompt_response.data.choices[0].message.content;
+    character_prompt_response.data.choices[0].message.content;
 
   let response_list = character_prompt_response_parsed.trim().split("\n");
 
@@ -153,7 +154,7 @@ app.post("/generate_suggestions", async (req, res) => {
 
   const char_obj_list = [];
 
-  console.log(response_list);
+  //console.log(response_list);
 
   for (let index in response_list) {
     if (parseInt(index) % 7 == 1) {
@@ -186,14 +187,69 @@ app.post("/generate_suggestions", async (req, res) => {
         customUserCharacter: "false",
       };
       char_obj_list.push(char_obj);
-      console.log("prompt object saved in db");
+      //console.log("prompt object saved in db");
       let char_obj_db = new Character(char_obj, { collection: "characters" });
       char_obj_db.save();
-      console.log("chars object saved in db");
+      //console.log("chars object saved in db");
     }
   }
 
-  res.json({ characters: char_obj_list });
+  // get the suggestion
+
+  console.log("<----------------------------------------------------->");
+
+  let file_prompt_suggestion = fs.readFileSync("suggestion_prompt.txt", "utf8");
+
+  file_prompt_suggestion =
+    file_prompt_suggestion +
+    promptTitle +
+    "\n" +
+    promptDesc +
+    "\n" +
+    response_list.join("\n");
+
+  //console.log(file_prompt_suggestion);
+
+  console.log(file_prompt_suggestion);
+
+  const suggestion_prompt_response = await openai.createChatCompletion({
+    model: "gpt-3.5-turbo",
+    messages: [{ role: "user", content: file_prompt_suggestion }],
+    max_tokens: 350,
+    temperature: 0,
+  });
+
+  const suggestion_prompt_response_parsed =
+    suggestion_prompt_response.data.choices[0].message.content;
+
+  //console.log(suggestion_prompt_response_parsed);
+
+  let suggestion_response_list = suggestion_prompt_response_parsed
+    .trim()
+    .split("\n");
+
+  console.log(suggestion_response_list);
+
+  const Suggestion = model<ISuggestion>("Suggestion", suggestionSchema);
+
+  let suggestion_text = suggestion_response_list[0].split(":")[1];
+  const suggestionId = uuidv4();
+  //   console.log(suggestionId.value);
+  const suggestion_obj = {
+    _id: suggestionId,
+    promptId: _id,
+    suggestionDesc: suggestion_text,
+    characters: char_obj_list,
+    outlineDesc: "empty for now",
+  };
+
+  let suggestion_obj_db = new Suggestion(suggestion_obj, {
+    collection: "suggestions",
+  });
+
+  suggestion_obj_db.save();
+
+  res.json({ characters: char_obj_list, suggestion: suggestion_text });
 });
 
 app.post("/generate_initial_prompts", async (req, res) => {
