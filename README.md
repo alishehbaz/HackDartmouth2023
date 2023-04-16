@@ -39,11 +39,11 @@ Beyond this function, users can use auto-name completion while they type the rec
 Solution: AI-empowered proofread. AI will summarize paragraphs the users have written. Users will then be able to compare with the summary of their current text and target content (the outline).
 
 ---
-## The process/workflow
+
+## What it does - The process/workflow
 Compared to letting AI write stories directly, Saga focuses more on structural building. While users input their ideas in the window, AI helps the user to store and update character settings. Users can edit the outline including the storylines, world lines, every single character's stories, etc. This will not cause copyright problems because users will write stories themselves eventually.
 
 ### Brainstorming
-
 There are two ways of starting from the vague idea:
 - By keywords/core theme
 - By a few sentences
@@ -79,6 +79,15 @@ After refining the story, users can publish their stories on Saga or other poten
 
 ## How we built it
 React, Node.js, MongoDB, Typescript, and GPT-3.5
+
+## Best Domain Name -- Track Prize
+
+
+## Best Accessibility Hack -- Track Prize
+Writing books is a long process, and writers may spend hours in front of the computer. Some may easily get tired, and some may have visual impairments. This project aims to help writers to write stories more efficiently, so we also want to make sure that this project is accessible to everyone. 
+
+The children group is one of the least patient groups, letting accomplish book become less intimating can potentially help children to focus. Particularly for the attention deficit hyperactivity disorder (ADHD) group, they may have a lot of creative ideas but haven't had chances to write them out. We want Saga to support them actualize this goal.
+
 
 ## What's next for Saga
 ### More approaches to outlining [Reference: writers.com](https://writers.com/how-to-write-a-story-outline)
