@@ -1,6 +1,7 @@
 <!-- # HackDartmouth2023 -->
 <!-- ## Elevator Pitch
 Writing stories with increasing efficiency without limiting creativity. This AI-powered project lowers the threshold for completing outlines, story settings, and refining their overall style and tone. -->
+
 >**Unleash your creativity with AI-powered efficiency.**
 
 ## Problem Statement
@@ -30,7 +31,7 @@ Solution: Based on the idea/outline provided by users, AI help to generate/attra
 **Scene three** - Users are uncertain about the characters setting, having trouble naming
 
 Solution: Users can edit the stored character list of anything during the writing process. If the user changes the name of one character, this character's name that has appeared in the existing text will be replaced with the new name.
-Beyond this function, users can use auto-name completion while they type the recorded character's name (or any object name in future features) to speed up their typing speed. Users will be benefited especially when the name string is long or in a multi-lingual environment.
+In future, beyond this function, users can use auto-name completion while they type the recorded character's name (or any object name in future features) to speed up their typing speed.
 
 
 ---
@@ -61,7 +62,6 @@ When users are in the brainstorming process, quantity weighs comparatively more 
 While creating a character, there is also a unique ID generated for the character. This ID won't appear on the interface, but it is for further operations.
 ### Writing Process
 - Outlining
-- Auto name-completion
 - Modify the name after finishing the story (find & replace throughout the whole story)
 - Text generation (AI-empowered)
 - Statistics (counts of characters' appearance time, first appearance, etc.)
@@ -99,6 +99,9 @@ Users will have more options in choosing the approach of outlining. This project
 
 ### Character attributes
 Our current character attribute number is limited, but customizable features can be expanded in the future.
+
+### Character name auto completion
+When user types the character's name, the auto-completion function will help users to complete the name. Users will be benefited especially when the name string is long or in a multi-lingual environment.
 
 ### Children friendly
 Children have many stories. Their creativities are far more imaginative. With a children-friendly mode for Saga, Children can easily create their very first stories. For example, in the brainstorming session, we can ask AI to begin with a sentence starter and let children fly their imaginations. Finishing stories can be accomplishments in their life and excellent practice experience. In addition, this can potentially benefit developmental psychology research and younger child education.
